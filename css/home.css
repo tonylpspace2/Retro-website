@@ -1,0 +1,175 @@
+body {
+    background: #000;
+    color: #00ff00;
+    font-family: 'VT323', monospace;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: fixed;
+}
+
+.welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.welcome-message {
+    font-size: 3.5em;
+    text-shadow: 0 0 10px #00ff00;
+    animation: glow 2s ease-in-out infinite alternate;
+    margin: 0;
+    padding: 20px;
+    margin-bottom: 140px;
+}
+
+.welcome-message h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    line-height: 1.2;
+}
+
+.welcome-message p {
+    font-size: 0.4em;
+    margin: 10px 0 0 0;
+    text-shadow: none;
+    animation: none;
+    opacity: 0.8;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #00ff00;
+    }
+    to {
+        text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00;
+    }
+}
+
+.binary-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+.terminal-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px auto;
+    padding: 10px;
+    font-family: 'VT323', monospace;
+}
+
+.nav-link {
+    color: #00ff00;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    color: #00cc00;
+    text-shadow: 0 0 5px #00ff00;
+}
+
+.ascii-art {
+    font-family: 'VT323', monospace;
+    white-space: pre;
+    font-size: 14px;
+    line-height: 1;
+    color: #00ff00;
+    margin: 15px auto 0;
+    overflow-x: auto;
+    text-align: center;
+    display: block;
+    width: fit-content;
+}
+
+.tech-timeline {
+    padding-left: 15px;
+    margin: 15px auto 0;
+    max-width: 60%;
+    display: block;
+    text-align: center;
+}
+
+.tech-timeline p {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.tech-quote {
+    font-style: italic;
+    color: #00ff00;
+    padding-left: 10px;
+    margin: 15px auto 0;
+    font-size: 1.1em;
+    text-align: center;
+    max-width: 60%;
+    display: block;
+}
+
+.container {
+    max-width: 95%;
+    margin: 50px auto 0;
+    padding: 10px;
+    color: #00ff00;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    color: #00ff00;
+    text-align: center;
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+h2 {
+    color: #00ff00;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+    
+    .ascii-art {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 85%;
+    }
+    
+    .ascii-art {
+        font-size: 18px;
+    }
+}
+
+.nav-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+

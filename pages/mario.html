@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Game - Terminal Website</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="binary-rain" id="binaryRain"></div>
+    <nav class="terminal-nav">
+        <a href="home.html" class="nav-link">[Home]</a>
+        <a href="about.html" class="nav-link">[About]</a>
+        <a href="skills.html" class="nav-link">[Skills]</a>
+        <a href="contact.html" class="nav-link">[Contact]</a>
+        <a href="blog.html" class="nav-link">[Blog]</a>
+    </nav>
+    <div class="container">
+        <div class="ascii-art">
+    ____  ____  ____  ____  ____ 
+   ||M ||||A ||||R ||||I ||||O ||
+   ||__||||__||||__||||__||||__||
+   |/__\||/__\||/__\||/__\||/__\|
+        </div>
+
+        <div class="game-container">
+            <canvas id="game-canvas" width="800" height="400"></canvas>
+            <div class="game-stats">
+                <p>Score: <span id="score">0</span></p>
+                <p>Lives: <span id="lives">3</span></p>
+            </div>
+        </div>
+
+        <div class="game-instructions">
+            <h2>How to Play</h2>
+            <p>Use arrow keys to move left and right</p>
+            <p>Press space to jump</p>
+            <p>Collect all coins to win!</p>
+            <p>Avoid the red obstacles</p>
+        </div>
+    </div>
+
+    <script src="../js/binary-rain.js"></script>
+    <script src="../js/mario.js"></script>
+</body>
+</html> 

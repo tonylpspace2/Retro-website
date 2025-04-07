@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Terminal Website</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="binary-rain" id="binaryRain"></div>
+    <nav class="terminal-nav">
+        <a href="home.html" class="nav-link">[Home]</a>
+        <a href="about.html" class="nav-link">[About]</a>
+        <a href="projects.html" class="nav-link">[Projects]</a>
+        <a href="contact.html" class="nav-link">[Contact]</a>
+        <a href="blog.html" class="nav-link">[Blog]</a>
+    </nav>
+
+    <div class="about-container">
+        <div class="ascii-art" id="asciiHeader">
+    ____  ____  ____  ____  ____  ____  ____  ____ 
+   ||A ||||B ||||O ||||U ||||T ||||  ||||M ||||E ||
+   ||__||||__||||__||||__||||__||||__||||__||||__||
+   |/__\||/__\||/__\||/__\||/__\||/__\||/__\||/__\|
+        </div>
+
+        <div class="tech-stats">
+            <div class="stat-box" onclick="toggleStats(this)">
+                <h3>System Specs</h3>
+                <div class="stat-content">
+                    <p>CPU: <span class="glitch-text">Self-Motivated Learner</span></p>
+                    <p>RAM: <span class="glitch-text">Problem Solver</span></p>
+                    <p>GPU: <span class="glitch-text">Creative Thinker</span></p>
+                    <p>Storage: <span class="glitch-text">Knowledge Seeker</span></p>
+                </div>
+            </div>
+
+            <div class="stat-box" onclick="toggleStats(this)">
+                <h3>Development Stack</h3>
+                <div class="stat-content">
+                    <p>Frontend: <span class="typewriter">HTML, CSS, JavaScript</span></p>
+                    <p>Backend: <span class="typewriter">Node.js, Python</span></p>
+                    <p>Tools: <span class="typewriter">Git, VS Code, Linux</span></p>
+                    <p>Learning: <span class="typewriter">Always expanding</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tech-timeline">
+            <h2 class="glitch-text">My Tech Journey</h2>
+            <div class="timeline-item" onclick="revealMore(this)">
+                <div class="timeline-year">2024</div>
+                <div class="timeline-content">
+                    <h3>Started Coding</h3>
+                    <p class="hidden-content">Began self-teaching programming fundamentals</p>
+                </div>
+            </div>
+            <div class="timeline-item" onclick="revealMore(this)">
+                <div class="timeline-year">Present</div>
+                <div class="timeline-content">
+                    <h3>Current Focus</h3>
+                    <p class="hidden-content">Building projects and expanding knowledge daily</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tech-quote">
+            <div class="quote-container">
+                <p class="typewriter-text">"I speak in code and dream in algorithms."</p>
+                <div class="quote-author">- Your Digital Self</div>
+            </div>
+        </div>
+
+        <div class="interactive-grid">
+            <div class="grid-item" onclick="showTechFact(this)">
+                <div class="grid-content">
+                    <h3>Tech Philosophy</h3>
+                    <p class="hidden-fact">Clean code is like poetry - it should be beautiful and efficient.</p>
+                </div>
+            </div>
+            <div class="grid-item" onclick="showTechFact(this)">
+                <div class="grid-content">
+                    <h3>Learning Style</h3>
+                    <p class="hidden-fact">I learn by doing - building projects is my favorite way to grow.</p>
+                </div>
+            </div>
+            <div class="grid-item" onclick="showTechFact(this)">
+                <div class="grid-content">
+                    <h3>Problem Solving</h3>
+                    <p class="hidden-fact">Every bug is a puzzle waiting to be solved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/binary-rain.js"></script>
+    <script src="../js/keyboard-shortcuts.js"></script>
+    <script>
+        function toggleStats(element) {
+            element.classList.toggle('active');
+        }
+
+        function revealMore(element) {
+            const hiddenContent = element.querySelector('.hidden-content');
+            hiddenContent.classList.toggle('visible');
+        }
+
+        function showTechFact(element) {
+            const fact = element.querySelector('.hidden-fact');
+            fact.classList.toggle('visible');
+            element.classList.toggle('active');
+        }
+
+        // Typewriter effect for quotes
+        const typewriterElements = document.querySelectorAll('.typewriter-text');
+        typewriterElements.forEach(element => {
+            const text = element.textContent;
+            element.textContent = '';
+            let i = 0;
+            const typeWriter = () => {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                }
+            };
+            typeWriter();
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Website</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="username-setup" class="username-setup">
+        <h2>Enter your username:</h2>
+        <input type="text" id="username-input" placeholder="username" autofocus>
+        <button id="set-username">Start Terminal</button>
+    </div>
+    <div class="terminal" style="display: none;">
+        <div class="terminal-header" id="terminal-header">user@terminal:~$</div>
+        <div class="terminal-body">
+            <p><span class="prompt" id="prompt">user@terminal:~$</span> <span id="command"></span></p>
+            <div id="output"></div>
+            <input type="text" id="input" placeholder="Type 'help' and press Enter" autofocus>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

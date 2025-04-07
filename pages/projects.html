@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Terminal Website</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <style>
+        .projects-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .project {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 1px solid #00ff00;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .project h3 {
+            color: #00ff00;
+            margin-top: 0;
+            border-bottom: 1px solid #00ff00;
+            padding-bottom: 10px;
+        }
+
+        .project p {
+            color: #00ff00;
+            margin: 10px 0;
+        }
+
+        .project-links {
+            margin-top: 15px;
+        }
+
+        .project-links a {
+            color: #00ff00;
+            text-decoration: none;
+            margin-right: 15px;
+            border: 1px solid #00ff00;
+            padding: 5px 10px;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .project-links a:hover {
+            background-color: #00ff00;
+            color: #000;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .tech-item {
+            background-color: rgba(0, 255, 0, 0.2);
+            color: #00ff00;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="binary-rain" id="binaryRain"></div>
+    <nav class="terminal-nav">
+        <a href="home.html" class="nav-link">[Home]</a>
+        <a href="about.html" class="nav-link">[About]</a>
+        <a href="contact.html" class="nav-link">[Contact]</a>
+        <a href="blog.html" class="nav-link">[Blog]</a>
+    </nav>
+    <div class="container">
+        <div class="ascii-art">
+    ____  ____  ____  ____  ____  ____  ____  ____ 
+   ||P ||||R ||||O ||||J ||||E ||||C ||||T ||||S ||
+   ||__||||__||||__||||__||||__||||__||||__||||__||
+   |/__\||/__\||/__\||/__\||/__\||/__\||/__\||/__\|
+        </div>
+
+        <div class="project-grid">
+            <div class="project">
+                <h3>Terminal Website</h3>
+                <p>A personal website designed to look and function like a terminal interface. Features include interactive commands, ASCII art, and a binary rain effect.</p>
+                <div class="tech-stack">
+                    <span class="tech-item">HTML5</span>
+                    <span class="tech-item">CSS3</span>
+                    <span class="tech-item">JavaScript</span>
+                    <span class="tech-item">Canvas API</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/yourusername/terminal-website" target="_blank">GitHub</a>
+                    <a href="https://terminal-website-demo.com" target="_blank">Live Demo</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Terminal Tetris</h3>
+                <p>A Tetris game built with a terminal theme, featuring classic gameplay mechanics and a retro aesthetic.</p>
+                <div class="tech-stack">
+                    <span class="tech-item">HTML5</span>
+                    <span class="tech-item">CSS3</span>
+                    <span class="tech-item">JavaScript</span>
+                    <span class="tech-item">Canvas API</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/yourusername/terminal-tetris" target="_blank">GitHub</a>
+                    <a href="tetris.html">Play Game</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Project 3</h3>
+                <p>Description of your third project goes here. Explain what it does, what technologies you used, and what makes it special.</p>
+                <div class="tech-stack">
+                    <span class="tech-item">Technology 1</span>
+                    <span class="tech-item">Technology 2</span>
+                    <span class="tech-item">Technology 3</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" target="_blank">GitHub</a>
+                    <a href="#" target="_blank">Live Demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/keyboard-shortcuts.js"></script>
+    <script src="../js/projects-binary-rain.js"></script>
+</body>
+</html> 
