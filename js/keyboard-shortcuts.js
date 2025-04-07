@@ -11,7 +11,7 @@ class KeyboardShortcuts {
         // Check for Ctrl + H (or Cmd + H on Mac)
         if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'h') {
             e.preventDefault(); // Prevent default browser behavior
-            window.location.href = '../index.html';
+            window.location.href = '/Retro-website/index.html';
         }
     }
 }
