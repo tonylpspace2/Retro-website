@@ -173,3 +173,100 @@ h2 {
     gap: 10px;
 }
 
+.terminal {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 800px;
+    height: 60vh;
+    margin: 20px auto;
+    background: #000;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'VT323', monospace;
+    font-size: 1.2em;
+}
+
+.terminal-header {
+    color: #00ff00;
+    padding: 5px;
+    border-bottom: 1px solid #00ff00;
+    margin-bottom: 10px;
+}
+
+.terminal-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    color: #00ff00;
+}
+
+#input {
+    background: transparent;
+    border: none;
+    color: #00ff00;
+    font-family: 'VT323', monospace;
+    font-size: 1.2em;
+    width: 100%;
+    outline: none;
+    padding: 5px;
+}
+
+.username-setup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #00ff00;
+}
+
+.username-setup h2 {
+    margin-bottom: 20px;
+}
+
+.username-setup input {
+    background: transparent;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    font-family: 'VT323', monospace;
+    font-size: 1.2em;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.username-setup button {
+    background: transparent;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    font-family: 'VT323', monospace;
+    font-size: 1.2em;
+    padding: 5px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.username-setup button:hover {
+    background: #00ff00;
+    color: #000;
+}
+
+.prompt {
+    color: #00ff00;
+    margin-right: 5px;
+}
+
+#output {
+    margin-top: 10px;
+}
+
+#output p {
+    margin: 5px 0;
+}
+
+#command {
+    color: #00ff00;
+}
+
