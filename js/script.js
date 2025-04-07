@@ -59,19 +59,19 @@ function processCommand(command) {
             `;
             break;
         case 'home':
-            window.location.href = '/';
+            window.location.href = '/Retro-website/pages/home.html';
             break;
         case 'about':
-            window.location.href = '/pages/about.html';
+            window.location.href = './pages/about.html';
             break;
         case 'projects':
-            window.location.href = '/pages/projects.html';
+            window.location.href = './pages/projects.html';
             break;
         case 'contact':
-            window.location.href = '/pages/contact.html';
+            window.location.href = './pages/contact.html';
             break;
         case 'blog':
-            window.location.href = '/pages/blog.html';
+            window.location.href = './pages/blog.html';
             break;
         case 'clear':
             output.innerHTML = '';
