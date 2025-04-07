@@ -58,32 +58,32 @@ function processCommand(command) {
                       '<p>- mario: Play Platformer</p>';
             break;
         case 'about':
-            window.location.href = '/Retro-website/pages/about.html';
+            window.location.href = 'pages/about.html';
             return;
         case 'date':
             response = `<p>${new Date().toString()}</p>`;
             break;
         case 'projects':
-            window.location.href = '/Retro-website/pages/projects.html';
+            window.location.href = 'pages/projects.html';
             return;
         case 'blog':
-            window.location.href = '/Retro-website/pages/blog.html';
+            window.location.href = 'pages/blog.html';
             return;
         case 'contact':
-            window.location.href = '/Retro-website/pages/contact.html';
+            window.location.href = 'pages/contact.html';
             return;
         case 'clear':
             output.innerHTML = '';
             commandDisplay.textContent = '';
             return;
         case 'home':
-            window.location.href = '/Retro-website/pages/home.html';
+            window.location.href = 'pages/home.html';
             return;
         case 'tetris':
-            window.location.href = '/Retro-website/pages/tetris.html';
+            window.location.href = 'pages/tetris.html';
             return;
         case 'mario':
-            window.location.href = '/Retro-website/pages/mario.html';
+            window.location.href = 'pages/mario.html';
             return;
         default:
             response = `<p>Command not found: ${command}</p>`;
