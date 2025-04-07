@@ -46,35 +46,44 @@ function processCommand(command) {
     switch (command.toLowerCase()) {
         case 'help':
             input.placeholder = '';
-            response = '<p>Available commands:</p><p>- help: Show this help message</p><p>- clear: Clear the terminal</p><p>- about: Navigate to About page</p><p>- skills: Navigate to Skills page</p><p>- contact: Navigate to Contact page</p><p>- projects: View my projects</p><p>- tetris: Play Tetris</p><p>- mario: Play Platformer</p>';
+            response = '<p>Available commands:</p>' +
+                      '<p>- help: Show this help message</p>' +
+                      '<p>- clear: Clear the terminal</p>' +
+                      '<p>- home: Go to Home page</p>' +
+                      '<p>- about: Go to About page</p>' +
+                      '<p>- projects: Go to Projects page</p>' +
+                      '<p>- blog: Go to Blog page</p>' +
+                      '<p>- contact: Go to Contact page</p>' +
+                      '<p>- tetris: Play Tetris</p>' +
+                      '<p>- mario: Play Platformer</p>';
             break;
         case 'about':
-            response = '<p>This terminal was built by Antonio Lopez on 04/07/2025</p>';
-            break;
+            window.location.href = 'pages/about.html';
+            return;
         case 'date':
             response = `<p>${new Date().toString()}</p>`;
             break;
         case 'projects':
-            window.location.href = '/pages/projects.html';
+            window.location.href = 'pages/projects.html';
             return;
-        case 'skills':
-            window.location.href = '/pages/skills.html';
+        case 'blog':
+            window.location.href = 'pages/blog.html';
             return;
         case 'contact':
-            window.location.href = '/pages/contact.html';
+            window.location.href = 'pages/contact.html';
             return;
         case 'clear':
             output.innerHTML = '';
             commandDisplay.textContent = '';
             return;
         case 'home':
-            window.location.href = '/pages/home.html';
+            window.location.href = 'pages/home.html';
             return;
         case 'tetris':
-            window.location.href = '/pages/tetris.html';
+            window.location.href = 'pages/tetris.html';
             return;
         case 'mario':
-            window.location.href = '/pages/mario.html';
+            window.location.href = 'pages/mario.html';
             return;
         default:
             response = `<p>Command not found: ${command}</p>`;
