@@ -43,50 +43,40 @@ input.addEventListener('keydown', (event) => {
 function processCommand(command) {
     let response = '';
 
-    switch (command.toLowerCase()) {
+    switch (command) {
         case 'help':
-            input.placeholder = '';
-            response = '<p>Available commands:</p>' +
-                      '<p>- help: Show this help message</p>' +
-                      '<p>- clear: Clear the terminal</p>' +
-                      '<p>- home: Go to Home page</p>' +
-                      '<p>- about: Go to About page</p>' +
-                      '<p>- projects: Go to Projects page</p>' +
-                      '<p>- blog: Go to Blog page</p>' +
-                      '<p>- contact: Go to Contact page</p>' +
-                      '<p>- tetris: Play Tetris</p>' +
-                      '<p>- mario: Play Platformer</p>';
+            output.innerHTML += `
+                <p>Available commands:</p>
+                <ul>
+                    <li>help - Show this help message</li>
+                    <li>home - Go to Home page</li>
+                    <li>about - Go to About page</li>
+                    <li>projects - Go to Projects page</li>
+                    <li>contact - Go to Contact page</li>
+                    <li>blog - Go to Blog page</li>
+                    <li>clear - Clear the terminal</li>
+                </ul>
+            `;
+            break;
+        case 'home':
+            window.location.href = 'pages/home.html';
             break;
         case 'about':
-            window.location.href = '/Retro-website/pages/about.html';
-            return;
-        case 'date':
-            response = `<p>${new Date().toString()}</p>`;
+            window.location.href = 'pages/about.html';
             break;
         case 'projects':
-            window.location.href = '/Retro-website/pages/projects.html';
-            return;
-        case 'blog':
-            window.location.href = '/Retro-website/pages/blog.html';
-            return;
+            window.location.href = 'pages/projects.html';
+            break;
         case 'contact':
-            window.location.href = '/Retro-website/pages/contact.html';
-            return;
+            window.location.href = 'pages/contact.html';
+            break;
+        case 'blog':
+            window.location.href = 'pages/blog.html';
+            break;
         case 'clear':
             output.innerHTML = '';
-            commandDisplay.textContent = '';
-            return;
-        case 'home':
-            window.location.href = '/Retro-website/pages/home.html';
-            return;
-        case 'tetris':
-            window.location.href = '/Retro-website/pages/tetris.html';
-            return;
-        case 'mario':
-            window.location.href = '/Retro-website/pages/mario.html';
-            return;
+            break;
         default:
-            response = `<p>Command not found: ${command}</p>`;
+            output.innerHTML += `<p>Command not found. Type 'help' for available commands.</p>`;
     }
-    output.innerHTML += response;
 }
